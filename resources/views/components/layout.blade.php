@@ -13,9 +13,8 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-gray-800">My Website</a>
             <div class="flex space-x-4">
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Home</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">About</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Contact</a>
+             <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+            <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
             </div>
         </nav>
     </header>
