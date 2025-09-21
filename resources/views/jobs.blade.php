@@ -6,15 +6,11 @@ Jobs Page
 @foreach ($jobs as $job)
 <li>
 <strong>{{ $job['title'] }}:</strong> Pays {{ $job['salary'] }} per year.
-</li>
-@endforeach
-</ul>
-<ul>
-@foreach ($jobs as $job)
-<li>
 <a href="/jobs/{{ $job['id'] }}" class="text-blue-500 hover:underline">
-<strong>{{ $job['title'] }}:</strong> Pays {{ $job['salary'] }} per year.
+<strong class="text-laracasts">{{ $job->employer->name }}:</strong> {{ $job['title']
+}} pays {{ $job['salary'] }} per year.
 </a>
+
 </li>
 @endforeach
 </ul>
