@@ -13,5 +13,13 @@ Jobs Page
 
 </li>
 @endforeach
+<div class="space-y-4">
+@foreach ($jobs as $job)
+{{-- Your existing job card link --}}
+@endforeach
+</div>
+<div class="mt-6">
+{{ $jobs->links() }}
+</div>
 </ul>
 </x-layout>

@@ -19,3 +19,9 @@ Route::get('/jobs/{id}', function ($id) {
 ]);
 
 });
+
+Route::get('/jobs', function () {
+return view('jobs', [
+'jobs' => \App\Models\Job::with('employer')->paginate(10)
+]);
+});
