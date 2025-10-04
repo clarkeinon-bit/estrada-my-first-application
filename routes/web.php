@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Job;
 
@@ -77,3 +77,5 @@ Route::delete('/jobs/{job}', function (\App\Models\Job $job) {
 $job->delete();
 return redirect('/jobs');
 });
+
+Route::resource('jobs', JobController::class);
